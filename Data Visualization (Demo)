@@ -1,0 +1,19 @@
+import pandas as pd
+from matplotlib import pyplot as plt
+
+#import os
+#print(os.getcwd())                              #for checking the current directory
+
+sample_data = pd.read_csv('sample_data.csv')
+#print(sample_data)                              #for printing the csv file
+#print(type(sample_data))                        #for printing the data type
+#print(sample_data.column_b)                     #for printing the b column
+#print(sample_data.column_b.iloc[2])             #for printing a value from the column
+
+plt.plot(sample_data.column_a, sample_data.column_b)
+plt.plot(sample_data.column_a, sample_data.column_c)
+plt.title('First data vis project')
+plt.xlabel('Column a')
+plt.ylabel("Column b & c")
+plt.legend(['col b vs col a', 'col c vs col a'])
+plt.show()
